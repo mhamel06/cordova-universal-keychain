@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-universal-keychain" version="0.1.4">
+        id="cordova-universal-keychain" version="0.1.5">
     <name>UniversalKeychain</name>
     <description>Plugin for cordova apps using segment.io</description>
     <license>Apache 2.0</license>
@@ -19,10 +19,10 @@
     <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="UniversalKeychain">
-                <param name="android-package" value="org.apache.cordova.plugin.UniversalKeychain"/>
+                <param name="android-package" value="com.mhamel.cordova.UniversalKeychain"/>
             </feature>
         </config-file>
-        <source-file src="src/android/UniversalKeychain.java" target-dir="src/org/apache/cordova/plugin" />
+        <source-file src="src/android/UniversalKeychain.java" target-dir="src/com/mhamel/cordova/UniversalKeychain" />
 
     </platform>
 </plugin>
