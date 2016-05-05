@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-universal-keychain" version="0.1.4">
+    <name>UniversalKeychain</name>
+    <description>Plugin for cordova apps using segment.io</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,device</keywords>
+    <js-module src="www/universalKeychain.js" name="universalKeychain">
+        <clobbers target="window.uKeychain" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="UniversalKeychain">
+                <param name="ios-package" value="HWPUniversalKeychain"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/UniversalKeychain.swift" />
+    </platform>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="UniversalKeychain">
+                <param name="android-package" value="org.apache.cordova.plugin.UniversalKeychain"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/UniversalKeychain.java" target-dir="src/org/apache/cordova/plugin" />
+
+    </platform>
+</plugin>
